@@ -29,7 +29,6 @@ def _extract_tags(html):
     >>> _extract_tags('Python <strong>rocks</strong>!')
     ['<strong>', '</strong>']
     '''
-    #iterate through strings till you find a <, then copy characters till you reach >
     for i in range(len(html)):
         tagss = []
         if html[i] == "<":
@@ -40,6 +39,4 @@ def _extract_tags(html):
                         tagss.append(tag)
                     else:
                         tag += html[x]
-    return tagss                        
-
-
+    return tagss
