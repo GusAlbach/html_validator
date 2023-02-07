@@ -29,8 +29,8 @@ def _extract_tags(html):
     >>> _extract_tags('Python <strong>rocks</strong>!')
     ['<strong>', '</strong>']
     '''
+    tagss = []
     for i in range(len(html)):
-        tagss = []
         if html[i] == "<":
             for x in range(len(html)):
                 tag = "<"
