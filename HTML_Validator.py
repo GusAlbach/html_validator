@@ -32,6 +32,22 @@ def _extract_tags(html):
     tagss = []
     for i in range(len(html)):
         if html[i] == "<":
+            stag = str()
+            for x in range(len(html)):
+                if (x + i) <= len(html):
+                    if (x + i) != '>':
+                        stag += html[x + i]
+                    else:
+                        stag += html[x + i]
+                        tagss.append(stag)
+    return tagss
+
+
+
+
+
+
+    '''        
             for x in range(len(html)):
                 tag = "<"
                 if x > i:
@@ -40,3 +56,4 @@ def _extract_tags(html):
                     else:
                         tag += html[x]
     return tagss
+    '''
