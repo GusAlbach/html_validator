@@ -41,19 +41,3 @@ def _extract_tags(html):
                         stag += html[x + i]
                         tagss.append(stag)
     return tagss
-
-
-
-
-
-
-    '''        
-            for x in range(len(html)):
-                tag = "<"
-                if x > i:
-                    if html[x] == '>':
-                        tagss.append(tag)
-                    else:
-                        tag += html[x]
-    return tagss
-    '''
