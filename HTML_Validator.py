@@ -11,15 +11,21 @@ def validate_html(html):
     False
     '''
     new = _extract_tags(html)
+    if html == "":
+        return True 
+    if new == []:
+        return False
     stack = []
     for i in new:
         if i[1] != "/":
             stack.append(i)
         else:
             check = i.replace("/", "")
+            if stack == []:
+                return False
             if stack.pop() != check:
                 return False
-    return True
+    return (len(stack) == 0) 
 
     # HINT:
     # use the _extract_tags function below to generate a list of html tags without any extra text;
