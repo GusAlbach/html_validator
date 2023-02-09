@@ -11,6 +11,10 @@ def validate_html(html):
     False
     '''
     new = _extract_tags(html)
+    if html == "":
+        return True
+    if len(new) == 0:
+        return False
     if (len(new) / 2) == int(len(new) / 2):
         return True
     else:
