@@ -10,6 +10,11 @@ def validate_html(html):
     >>> validate_html('<strong>example')
     False
     '''
+    new = _extract_tags(html)
+    if (len(new) / 2) == int(len(new) / 2):
+        return True
+    else:
+        return False
 
     # HINT:
     # use the _extract_tags function below to generate a list of html tags without any extra text;
@@ -41,18 +46,3 @@ def _extract_tags(html):
             str += html[a:b + 1]
             tags.append(str)
     return tags
-
-    '''
-    tagss = []
-    for i in range(len(html)):
-        if html[i] == "<":
-            stag = str()
-            for x in range(len(html)):
-                if (x + i) < len(html):
-                    if html[x + i] != '>':
-                        stag += html[x + i]
-                    else:
-                        stag += html[x + i]
-                        tagss.append(stag)
-    return tagss
-    '''
