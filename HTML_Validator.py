@@ -12,7 +12,7 @@ def validate_html(html):
     '''
     new = _extract_tags(html)
     if html == "":
-        return True 
+        return True
     if new == []:
         return False
     stack = []
@@ -25,7 +25,7 @@ def validate_html(html):
                 return False
             if stack.pop() != check:
                 return False
-    return (len(stack) == 0) 
+    return (len(stack) == 0)
 
     # HINT:
     # use the _extract_tags function below to generate a list of html tags without any extra text;
