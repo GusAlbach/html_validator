@@ -38,7 +38,7 @@ def _extract_tags(html):
             a = i
         if html[i] == ">":
             b = i
-            str += html[a:b+1]
+            str += html[a:b + 1]
             tags.append(str)
     return tags
 
